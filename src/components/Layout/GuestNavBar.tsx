@@ -119,7 +119,7 @@ function ResponsiveAppBar() {
                 Nous contacter
               </Button>
             </NavLink>
-            <IconButton
+            {/* <IconButton
               size="large"
               edge="end"
               aria-label="account of current user"
@@ -128,11 +128,11 @@ function ResponsiveAppBar() {
               color="inherit"
             >
               <AccountCircle />
-            </IconButton>
+            </IconButton> */}
           </div>
         </Toolbar>
       </AppBar>
-      {renderMenu}
+      {/* {renderMenu} */}
     </Box>
   );
 }

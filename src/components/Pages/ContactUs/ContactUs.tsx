@@ -36,7 +36,7 @@ const ContactPage = () => {
           </Card>
         </Box>
 
-        <Box sx={{ my: 4 }}>
+        {/* <Box sx={{ my: 4 }}>
           <Card>
             <CardContent>
               <Typography variant="h5" gutterBottom>
@@ -70,7 +70,7 @@ const ContactPage = () => {
               </form>
             </CardContent>
           </Card>
-        </Box>
+        </Box> */}
       </Container>
     </div>
   );
