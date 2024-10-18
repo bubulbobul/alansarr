@@ -68,7 +68,7 @@ function ResponsiveAppBar() {
           }}
         >
           <NavLink
-            to="/"
+            to="/alansarr"
             style={{
               textDecoration: "none",
               display: "flex",
@@ -99,22 +99,22 @@ function ResponsiveAppBar() {
           </NavLink>
 
           <div>
-            <NavLink to="/schoolprogram">
+            <NavLink to="/alansarr/schoolprogram">
               <Button sx={{ color: "white", marginRight: "10px" }}>
                 Programme
               </Button>
             </NavLink>
-            <NavLink to="/pricing">
+            <NavLink to="/alansarr/pricing">
               <Button sx={{ color: "white", marginRight: "10px" }}>
                 Tarifs
               </Button>
             </NavLink>
-            <NavLink to="/about">
+            <NavLink to="/alansarr/about">
               <Button sx={{ color: "white", marginRight: "10px" }}>
                 A propos de
               </Button>
             </NavLink>
-            <NavLink to="/contactus">
+            <NavLink to="/alansarr/contactus">
               <Button sx={{ color: "white", marginRight: "10px" }}>
                 Nous contacter
               </Button>

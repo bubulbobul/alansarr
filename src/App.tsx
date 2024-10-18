@@ -15,13 +15,13 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/schoolprogram" element={<SchoolProgram />} />
-        <Route path="/pricing" element={<Pricing />} />
-        <Route path="/registration" element={<Registration />} />
+        <Route path="/alansarr" element={<Home />} />
+        <Route path="/alansarr/about" element={<AboutUs />} />
+        <Route path="/alansarr/contactus" element={<ContactUs />} />
+        <Route path="/alansarr/login" element={<Login />} />
+        <Route path="/alansarr/schoolprogram" element={<SchoolProgram />} />
+        <Route path="/alansarr/pricing" element={<Pricing />} />
+        <Route path="/alansarr/registration" element={<Registration />} />
       </Routes>
       <Footer />
     </>

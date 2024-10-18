@@ -28,7 +28,7 @@ const Home = () => {
                 Apprenez la belle langue arabe avec des professeurs expérimentés
                 dans un environnement culturellement enrichissant.
               </Typography>
-              <Link to="schoolprogram">
+              <Link to="/alansarr/schoolprogram">
                 <Button
                   variant="contained"
                   sx={{ backgroundColor: "#1D3557" }}

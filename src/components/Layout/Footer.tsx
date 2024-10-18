@@ -23,22 +23,22 @@ const Footer = () => {
           {/* Liens rapides */}
           <Box display="flex" mt={2} justifyContent="center">
             <Box m={1}>
-              <Link to="/schoolprogram" style={linkStyle}>
+              <Link to="/alansarr/schoolprogram" style={linkStyle}>
                 <Typography variant="body2">Programme</Typography>
               </Link>
             </Box>
             <Box m={1}>
-              <Link to="/pricing" style={linkStyle}>
+              <Link to="/alansarr/pricing" style={linkStyle}>
                 <Typography variant="body2">Tarifs</Typography>
               </Link>
             </Box>
             <Box m={1}>
-              <Link to="/about" style={linkStyle}>
+              <Link to="/alansarr/about" style={linkStyle}>
                 <Typography variant="body2">A propos de</Typography>
               </Link>
             </Box>
             <Box m={1}>
-              <Link to="/contactus" style={linkStyle}>
+              <Link to="/alansarr/contactus" style={linkStyle}>
                 <Typography variant="body2">Nous contacter</Typography>
               </Link>
             </Box>
