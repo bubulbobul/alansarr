@@ -1,14 +1,36 @@
 import {
   Typography,
-  Button,
   Container,
   Box,
-  TextField,
   Card,
   CardContent,
+  TextField,
+  Button,
 } from "@mui/material";
+import { ErrorMessage, Form, Formik } from "formik";
+import { useState } from "react";
+import * as Yup from "yup";
+
+const validationSchema = Yup.object({
+  name: Yup.string().required("Name is required"),
+  email: Yup.string()
+    .email("Invalid email format")
+    .required("Email is required"),
+  message: Yup.string().required("Message is required"),
+});
 
 const ContactPage = () => {
+  const [formValues, setFormValues] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleSubmit = (values: any, { resetForm }: any) => {
+    console.log("Form Submitted: ", values);
+    setFormValues(values);
+    resetForm();
+  };
   return (
     <div>
       <Container maxWidth="md" sx={{ my: 4 }}>
@@ -19,7 +41,6 @@ const ContactPage = () => {
           Pour toute question ou renseignement, n'hésitez pas à nous contacter
           via les informations ci-dessous ou à nous envoyer un message.
         </Typography>
-
         <Box sx={{ my: 4 }}>
           <Card>
             <CardContent>
@@ -40,34 +61,90 @@ const ContactPage = () => {
           <Card>
             <CardContent>
               <Typography variant="h5" gutterBottom>
-                Envoyer un message
+                Envoyez-nous un message
               </Typography>
+              <br></br>
+              <Formik
+                initialValues={formValues} // Use local state for initial values
+                validationSchema={validationSchema}
+                onSubmit={handleSubmit}
+              >
+                {({ values, handleChange, isSubmitting }) => (
+                  <Form>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        gap: 2,
+                        width: "100%",
+                      }}
+                    >
+                      <TextField
+                        name="name"
+                        label="Nom"
+                        fullWidth
+                        variant="outlined"
+                        value={values.name}
+                        onChange={handleChange}
+                        helperText={
+                          <ErrorMessage
+                            name="name"
+                            component="div"
+                            className="error-message"
+                          />
+                        }
+                      />
 
-              <form>
-                <TextField
-                  fullWidth
-                  label="Nom"
-                  variant="outlined"
-                  sx={{ mb: 2 }}
-                />
-                <TextField
-                  fullWidth
-                  label="Adresse e-mail"
-                  variant="outlined"
-                  sx={{ mb: 2 }}
-                />
-                <TextField
-                  fullWidth
-                  label="Message"
-                  variant="outlined"
-                  multiline
-                  rows={4}
-                  sx={{ mb: 2 }}
-                />
-                <Button variant="contained" color="primary" fullWidth>
-                  Envoyer
-                </Button>
-              </form>
+                      <TextField
+                        name="email"
+                        label="Email"
+                        type="email"
+                        fullWidth
+                        variant="outlined"
+                        value={values.email}
+                        onChange={handleChange}
+                        helperText={
+                          <ErrorMessage
+                            name="email"
+                            component="div"
+                            className="error-message"
+                          />
+                        }
+                      />
+
+                      <TextField
+                        name="message"
+                        label="Message"
+                        fullWidth
+                        multiline
+                        rows={4}
+                        variant="outlined"
+                        value={values.message}
+                        onChange={handleChange}
+                        helperText={
+                          <ErrorMessage
+                            name="message"
+                            component="div"
+                            className="error-message"
+                          />
+                        }
+                      />
+
+                      {/* Submit Button */}
+                      <Button
+                        type="submit"
+                        variant="contained"
+                        color="primary"
+                        disabled={isSubmitting}
+                        sx={{ width: "100%", marginTop: "10px" }}
+                      >
+                        {isSubmitting ? "Sending..." : "Send Message"}
+                      </Button>
+                    </Box>
+                  </Form>
+                )}
+              </Formik>
             </CardContent>
           </Card>
         </Box>

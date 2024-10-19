@@ -2,11 +2,7 @@ import { IconButton } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import TelegramIcon from "@mui/icons-material/Telegram";
-import {
-  intituteGMail,
-  intituteTelegram,
-  whatstappLink,
-} from "../../generalInfo";
+import { instituteInfo } from "../../constant";
 
 function ExternalLinks() {
   return (
@@ -14,7 +10,7 @@ function ExternalLinks() {
       {/* Gmail Link */}
       <IconButton
         component="a"
-        href={`mailto:${intituteGMail}`}
+        href={`mailto:${instituteInfo.gmail}`}
         target="_blank"
         rel="noopener noreferrer"
         sx={{ color: "#D44638" }}
@@ -25,7 +21,7 @@ function ExternalLinks() {
       {/* Telegram Link */}
       <IconButton
         component="a"
-        href={intituteTelegram}
+        href={instituteInfo.telegramLink}
         target="_blank"
         rel="noopener noreferrer"
         sx={{ color: "#0088cc" }}
@@ -36,7 +32,7 @@ function ExternalLinks() {
       {/* WhatsApp Link */}
       <IconButton
         component="a"
-        href={whatstappLink}
+        href={instituteInfo.whatstappLink}
         target="_blank"
         rel="noopener noreferrer"
         sx={{ color: "#25D366" }}

@@ -8,6 +8,7 @@ import {
   Box,
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import { APP_PATH, DEFAULT_BLUE } from "../../constant";
 
 const Home = () => {
   return (
@@ -28,10 +29,10 @@ const Home = () => {
                 Apprenez la belle langue arabe avec des professeurs expérimentés
                 dans un environnement culturellement enrichissant.
               </Typography>
-              <Link to="schoolprogram">
+              <Link to={APP_PATH.LOGIN}>
                 <Button
                   variant="contained"
-                  sx={{ backgroundColor: "#1D3557" }}
+                  sx={{ backgroundColor: DEFAULT_BLUE }}
                   size="large"
                 >
                   Découvrir nos cours

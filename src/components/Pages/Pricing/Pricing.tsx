@@ -29,7 +29,7 @@ const TarificationPage = () => {
                 Tarification: <strong>5€/h</strong>
               </Typography>
               <Divider />
-              <Typography variant="body2" sx={{ mt: 2 }}>
+              <Typography variant="body1" sx={{ mt: 2 }}>
                 Idéal pour un apprentissage individuel adapté à vos besoins. Un
                 minimum d'engagement de <strong>3 heures par semaine</strong>{" "}
                 est requis.
@@ -48,7 +48,7 @@ const TarificationPage = () => {
                 Tarification: <strong>2,5€/h</strong> par personne
               </Typography>
               <Divider />
-              <Typography variant="body2" sx={{ mt: 2 }}>
+              <Typography variant="body1" sx={{ mt: 2 }}>
                 Parfait pour apprendre avec un partenaire. Le prix est réduit
                 tout en gardant un enseignement personnalisé. Un minimum
                 d'engagement de <strong>3 heures par semaine</strong> est requis

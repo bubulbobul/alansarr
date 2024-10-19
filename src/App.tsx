@@ -9,19 +9,20 @@ import Navbar from "./components/Layout/Navbar";
 import Registration from "./components/Registration/Registration";
 import Footer from "./components/Layout/Footer";
 import Pricing from "./components/Pages/Pricing/Pricing";
+import { APP_PATH } from "./components/constant";
 
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/schoolprogram" element={<SchoolProgram />} />
-        <Route path="/pricing" element={<Pricing />} />
-        <Route path="/registration" element={<Registration />} />
+        <Route path={APP_PATH.HOME} element={<Home />} />
+        <Route path={APP_PATH.ABOUT} element={<AboutUs />} />
+        <Route path={APP_PATH.CONTACT} element={<ContactUs />} />
+        <Route path={APP_PATH.LOGIN} element={<Login />} />
+        <Route path={APP_PATH.PROGRAM} element={<SchoolProgram />} />
+        <Route path={APP_PATH.PRICING} element={<Pricing />} />
+        <Route path={APP_PATH.REGISTRATION} element={<Registration />} />
       </Routes>
       <Footer />
     </>
