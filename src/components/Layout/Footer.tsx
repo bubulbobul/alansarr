@@ -1,12 +1,15 @@
 import { Box, Container, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import ExternalLinks from "./ExternalLink/ExternalLinks";
+import { APP_PATH, instituteInfo } from "../constant";
 
 const linkStyle = { textDecoration: "none", color: "white" };
 
 const Footer = () => {
   return (
-    <Box sx={{ backgroundColor: "#333", py: 4, color: "white" }}>
+    <Box
+      sx={{ backgroundColor: "#333", py: 4, color: "white", marginTop: "50px" }}
+    >
       <Container maxWidth="lg">
         <Box
           display="flex"
@@ -14,31 +17,31 @@ const Footer = () => {
           alignItems="center"
           textAlign="center"
         >
-          <Typography variant="h6">Institut Al-Ansarr</Typography>
-          <Typography variant="body2">Téléphone : +222 41 44 15 72</Typography>
+          <Typography variant="h6">Institut {instituteInfo.name}</Typography>
           <Typography variant="body2">
-            Email : institutansarr@gmail.com
+            Téléphone : {instituteInfo.number}
           </Typography>
+          <Typography variant="body2">Email : {instituteInfo.gmail}</Typography>
 
           {/* Liens rapides */}
           <Box display="flex" mt={2} justifyContent="center">
             <Box m={1}>
-              <Link to="/schoolprogram" style={linkStyle}>
+              <Link to={APP_PATH.PROGRAM} style={linkStyle}>
                 <Typography variant="body2">Programme</Typography>
               </Link>
             </Box>
             <Box m={1}>
-              <Link to="/pricing" style={linkStyle}>
+              <Link to={APP_PATH.PRICING} style={linkStyle}>
                 <Typography variant="body2">Tarifs</Typography>
               </Link>
             </Box>
             <Box m={1}>
-              <Link to="/about" style={linkStyle}>
+              <Link to={APP_PATH.ABOUT} style={linkStyle}>
                 <Typography variant="body2">A propos de</Typography>
               </Link>
             </Box>
             <Box m={1}>
-              <Link to="/contactus" style={linkStyle}>
+              <Link to={APP_PATH.CONTACT} style={linkStyle}>
                 <Typography variant="body2">Nous contacter</Typography>
               </Link>
             </Box>

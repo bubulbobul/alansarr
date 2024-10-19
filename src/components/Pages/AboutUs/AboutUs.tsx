@@ -52,12 +52,13 @@ const AboutUs = () => {
           <Card sx={{ my: 2 }}>
             <CardContent>
               <Typography variant="body1">
-                <b>RENDRE ARABE CE QUI NE L'ÉTAIT PAS.</b>L'objectif de
-                l'Institut est de permettre à ses élèves d'obtenir des bases
-                solides dans la langue arabe leur permettant de pouvoir enfin
-                comprendre le Coran et la Sunnah et ainsi de faire leurs
-                premiers pas dans l'étude de la science auprès de nos bien-aimés
-                savants.
+                <b>RENDRE ARABE CE QUI NE L'ÉTAIT PAS.</b>
+                <br />
+                L'objectif de l'Institut est de permettre à ses élèves d'obtenir
+                des bases solides dans la langue arabe leur permettant de
+                pouvoir enfin comprendre le Coran et la Sunnah et ainsi de faire
+                leurs premiers pas dans l'étude de la science auprès de nos
+                bien-aimés savants.
               </Typography>
             </CardContent>
           </Card>
